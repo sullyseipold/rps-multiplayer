@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RPS Multiplayer</title>
+
+  <!-- Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-messaging.js"></script>
+</head>
+
+<body>
+
+  <div class="container h-100 d-flex">
+    <!--GAME VIEW -->
+    <div class="jumbotron my-auto game-view" id="jumbotron-center">
+        <h1 class="display-5 text-center">Rock Paper Scissors - Multiplayer</h1>
+
+      <hr class="mb-3">
+      <div class="card-group">
+
+          <div class="card" data-type="rock">
+                <img class="card-img-top" src="./assets/images/rock.png" alt="Card image cap">
+                <a href="#">
+                  <div class="card-img-overlay d-flex" id="rock-overlay">
+                      <div class="my-auto mx-auto text-center">
+                          <!-- <h4 class="card-title">Rock</h4> -->
+                      </div>
+                    </div>
+                </a>
+          </div>
+
+
+          <div class="card" data-type="paper">
+            <img class="card-img-top" src="./assets/images/paper.png" alt="Card image cap">
+            <a href="#">
+              <div class="card-img-overlay d-flex" id="paper-overlay">
+                  <div class="my-auto mx-auto text-center">
+                      <!-- <h4 class="card-title">Paper</h4> -->
+                  </div>
+                </div>
+            </a>
+          </div>
+
+
+          <div class="card" data-type="scissors">
+            <img class="card-img-top" src="./assets/images/scissors.png" alt="Card image cap">
+            <a href="#">
+              <div class="card-img-overlay d-flex" id="scissors-overlay">
+                  <div class="my-auto mx-auto text-center">
+                      <!-- <h4 class="card-title">Scissors</h4> -->
+                  </div>
+                </div>
+            </a>
+          </div>
+          
+        </div>
+
+      <hr class="mb-3">
+      <p id="connected"></p>
+      <div class="row">
+        <div class="col-sm-3">
+            Player 1: <span id="player-1-span"></span> 
+        </div>
+        <div class="col-sm-6">
+          <h1 class="display-5 text-center" id="outcome"></h1>
+        </div>
+        
+        <div class="col-sm-3">
+            Player 2: <span id="player-2-span"></span> 
+        </div>
+      </div>
+
+      <div class="row" id="scores">
+        <div class="col-sm-4">
+            wins: <span id="wins-span"></span>
+        </div>
+        <div class="col-sm-4 text-center">
+            losses: <span id="losses-span"></span>
+        </div>
+        <div class="col-sm-4 text-right">
+            ties: <span id="ties-span"></span>
+        </div>
+      
+      </div>
+
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./assets/javascript/app.js"></script>
+</body>
+
+</html>

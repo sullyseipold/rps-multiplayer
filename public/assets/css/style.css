@@ -1,0 +1,30 @@
+html, body  {
+    height: 100%;
+}
+
+#jumbotron-center {
+    width: 100%;
+    padding-bottom: 0px;
+}
+
+.rps-image {
+    margin: 10px;
+}
+
+.card {
+    margin: 10px;
+}
+
+#scores {
+    margin-top: 20px;
+}
+
+.selected {
+    /* background-color: rgb(97, 106, 110); */
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    
+}
+
+
